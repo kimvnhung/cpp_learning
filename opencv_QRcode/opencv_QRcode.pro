@@ -1,4 +1,4 @@
-QT = core
+QT = core gui
 
 CONFIG += c++17 cmdline
 
@@ -19,8 +19,8 @@ win32{
 
 unix{
     ## Opencv4
-    INCLUDEPATH += /usr/local/include/opencv4
-    DEPENDPATH += /usr/local/include/opencv4
+    INCLUDEPATH += /usr/include/opencv4
+    DEPENDPATH += /usr/include/opencv4
     # Include all libs of opencv4
     LIBS += $(shell pkg-config opencv4 --libs)
 }
@@ -32,3 +32,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     helpers/opencvhelper.h
+
+RESOURCES += \
+    images.qrc
