@@ -103,7 +103,7 @@ QPoint OpenCVHelper::checkPoint(cv::Mat src_img,cv::Mat temp,bool isGetCenter)
     }
 
     if (src_img.data == NULL) {
-        printf(" %d :screen empty\n");
+        printf(" %d :screen empty\n",1);
         return QPoint(-1,-1);
     }
     //    qDebug()<<src_img.cols<<","<<src_img.rows;
@@ -158,7 +158,7 @@ QList<QPoint> OpenCVHelper::checkPoints(cv::Mat src_img, cv::Mat temp, bool isGe
     //    cv::imshow("temp",temp);
 
     if (src_img.data == NULL) {
-        printf(" %d :screen empty\n");
+        printf(" %d :screen empty\n",1);
         return rt;
     }
 
